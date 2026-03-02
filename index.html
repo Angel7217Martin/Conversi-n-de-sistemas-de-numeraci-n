@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Sistemas de Numeración</title>
+    <title>Sistemas de Numeración</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -12,68 +12,40 @@
 </head>
 
 <body>
-    <div class="background-elements">
-        <div class="blob shape1"></div>
-        <div class="blob shape2"></div>
-    </div>
-
     <main class="converter-container">
         <header>
-            <div class="icon-container">
-                <svg xmlns="http://www.w3.org/http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-cpu">
-                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                    <rect x="9" y="9" width="6" height="6"></rect>
-                    <line x1="9" y1="1" x2="9" y2="4"></line>
-                    <line x1="15" y1="1" x2="15" y2="4"></line>
-                    <line x1="9" y1="20" x2="9" y2="23"></line>
-                    <line x1="15" y1="20" x2="15" y2="23"></line>
-                    <line x1="20" y1="9" x2="23" y2="9"></line>
-                    <line x1="20" y1="14" x2="23" y2="14"></line>
-                    <line x1="1" y1="9" x2="4" y2="9"></line>
-                    <line x1="1" y1="14" x2="4" y2="14"></line>
-                </svg>
-            </div>
             <h2>Conversor Web</h2>
-            <p class="subtitle">Sistemas de Numeración</p>
+            <p class="subtitle">Sistemas Numéricos</p>
         </header>
 
         <section class="input-section">
             <div class="input-group">
-                <label for="sistema">Sistema de Origen</label>
+                <label for="sistema">Base Origen</label>
                 <div class="custom-select">
                     <select id="sistema">
-                        <option value="10">Decimal (Base 10)</option>
-                        <option value="2">Binario (Base 2)</option>
-                        <option value="8">Octal (Base 8)</option>
-                        <option value="16">Hexadecimal (Base 16)</option>
+                        <option value="10">Decimal (10)</option>
+                        <option value="2">Binario (2)</option>
+                        <option value="8">Octal (8)</option>
+                        <option value="16">Hexadecimal (16)</option>
                     </select>
                 </div>
             </div>
 
             <div class="input-group">
-                <label for="numero">Número a Convertir</label>
+                <label for="numero">Número</label>
                 <input type="text" id="numero" placeholder="Ej. 1A4" autocomplete="off">
-                <span class="error-msg" id="error-msg">Número inválido para el sistema seleccionado</span>
+                <span class="error-msg">Inválido para esta base</span>
             </div>
 
             <button id="btnConvertir" class="btn-primary">
-                <span>Convertir</span>
-                <svg xmlns="http://www.w3.org/http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                </svg>
+                Convertir &rarr;
             </button>
         </section>
 
         <section class="results-section" id="resultados">
-            <!-- Results injected here by JS -->
             <div class="placeholder-text">Los resultados aparecerán aquí.</div>
         </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 
